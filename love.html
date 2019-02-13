@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>love_percentage</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<style type="text/css">
+		body{
+			background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)),url("1.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100vh;
+			width: 100%;
+
+		}
+		header{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50%);
+		}
+        
+		#message{
+			color: red;
+		}
+		#messagee{
+			color: red;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function checkloverper(){
+			var a = document.getElementById("your").value;
+            var b = document.getElementById("love").value;
+             if(a.length>3&&b.length>3){
+
+		    var lovevalue = Math.random() * 100;
+		    lovevalue = Math.floor(lovevalue);
+		    document.getElementById('lovevalue').value=lovevalue + "%";
+
+	        }
+
+
+            if(a.length==" "){
+            	document.getElementById("message").innerHTML="**please fill your name completely";
+            	return false;
+            }
+            
+            if(b.length==""){
+            	document.getElementById("messagee").innerHTML="**please fill your love name completely";
+            	return false;
+            }
+
+      
+}
+	</script>
+</head>
+<body>
+  <header>
+  	
+
+  	<div class="card w-100">
+  <div class="card-header bg-warning text-center text-white">LOVE CALCULATOR</div>
+  <div class="card-body">
+  	
+  	<form class="form-inline " >
+  		<div class="form-group">
+  			<input type="text" name=""  class="form-control"  placeholder="Your Name" id="your">
+  			<span  id="message"></span>
+  		</div>
+  		
+  		<div>
+  			<span class="pl-4 pr-4">+</span>
+  		</div>	
+
+  		<div class="form-group">
+  			<input type="text" name="" class="form-control" placeholder="Love Name" id="love">
+  			<span  id="messagee"></span>
+  		</div>
+
+  	</form>
+  	<br>
+  	<div class="w-75 m-auto">
+  	    <button class="btn btn-success w-100 text-center " onclick="checkloverper()">Click</button>
+   	</div>
+    <br>
+   	<div>
+   		<input type="text" name=""  placeholder="love Percentage" id="lovevalue" class="form-control text-center pl" >
+   	</div>
+
+  </div> 
+  <div class="card-footer text-center bg-warning">Relationship Matters Alot!</div>
+</div>
+
+
+  </header>
+</body>
+</html>
